@@ -8,127 +8,140 @@
     <title>Track Suggester</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container bg-primary">
       <div class="jumbotron">
         <h1>Track Suggester</h1>
+        <h2>Which Epicodus track is right for you?</h2>
+        <h2>Take the quiz and find out!</h2>
       </div>
-      <h2>Which Epicodus track is right for you?</h2>
-      <h2>Take the quiz and find out!</h2>
-      <form id="trackQuestions">
-        <h3>Which Creators do you admire:</h3>
-        <div class="">
-          <h4>Yukihiro Matsumoto & David Heinemeier Hanssonn?</h4>
-          <div class="radio">
-            <label>
-              <input type="radio" name="matz" value="1" checked>
-              yes
-            </label>
+      <form id="trackQuestions" class="row">
+        <div class="col-sm-6">
+          <h3>Which Creators do you admire:</h3>
+          <br>
+          <div class="">
+            <h4>Yukihiro Matsumoto & David Heinemeier Hanssonn?</h4>
+            <div class="radio">
+              <label>
+                <input type="radio" name="matz" value="1" checked>
+                yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="matz" value="0">
+                no
+              </label>
+            </div>
           </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="matz" value="0">
-              no
-            </label>
+          <div class="">
+            <h4>James Gosling & Patrick Naughton?</h4>
+            <div class="radio">
+              <label>
+                <input type="radio" name="gosling" value="1" checked>
+                yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="gosling" value="0">
+                no
+              </label>
+            </div>
+          </div>
+          <div class="">
+            <h4>Rasmus Lerdorf & Zeev Suraski & Andi Gutmans?</h4>
+            <div class="radio">
+              <label>
+                <input type="radio" name="rasmus" value="1" checked>
+                yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="rasmus" value="0">
+                no
+              </label>
+            </div>
+          </div>
+          <div class="">
+            <h4>Anders Hejlsberg & Microsoft team </h4>
+            <div class="radio">
+              <label>
+                <input type="radio" name="anders" value="1" checked>
+                yes
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="anders" value="0">
+                no
+              </label>
+            </div>
           </div>
         </div>
-        <div class="">
-          <h4>James Gosling & Patrick Naughton?</h4>
-          <div class="radio">
-            <label>
-              <input type="radio" name="gosling" value="1" checked>
-              yes
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="gosling" value="0">
-              no
-            </label>
-          </div>
+        <div class="col-sm-6">
+          <h4>What kind of company do you want to work for?</h4>
+          <select class="form-control" id="compSize">
+            <option value="0">startups and smaller companies</option>
+            <option value="1">Enterprise-Level Company</option>
+            <option value="2">Fast Paced Agency</option>
+            <option value="3">Big Company</option>
+          </select>
+          <h3>On a scale of 1-5, rate how much you think you'd enjoy working with these languages:</h4>
+          <h4 class="langName">Ruby</h4>
+          <select class="form-control langName" id="rubyPref">
+            <option>5</option>
+            <option>4</option>
+            <option>3</option>
+            <option>2</option>
+            <option>1</option>
+          </select>
+          <br>
+          <h4 class="langName">Java</h4>
+          <select class="form-control langName" id="javaPref">
+            <option>5</option>
+            <option>4</option>
+            <option>3</option>
+            <option>2</option>
+            <option>1</option>
+          </select>
+          <br>
+          <h4 class="langName">PHP</h4>
+          <select class="form-control langName" id="phpPref">
+            <option>5</option>
+            <option>4</option>
+            <option>3</option>
+            <option>2</option>
+            <option>1</option>
+          </select>
+          <br>
+          <h4 class="langName"  >C#</h4>
+          <select class="form-control langName" id="cSharpPref">
+            <option>5</option>
+            <option>4</option>
+            <option>3</option>
+            <option>2</option>
+            <option>1</option>
+          </select>
+          <br>
+          <button type="submit" class="btn">Submit!</button>
         </div>
-        <div class="">
-          <h4>Rasmus Lerdorf & Zeev Suraski & Andi Gutmans?</h4>
-          <div class="radio">
-            <label>
-              <input type="radio" name="rasmus" value="1" checked>
-              yes
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="rasmus" value="0">
-              no
-            </label>
-          </div>
-        </div>
-        <div class="">
-          <h4>Anders Hejlsberg & Microsoft team </h4>
-          <div class="radio">
-            <label>
-              <input type="radio" name="anders" value="1" checked>
-              yes
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="anders" value="0">
-              no
-            </label>
-          </div>
-        </div>
-        <h4>What kind of company do you want to work for?</h4>
-        <select class="form-control" id="compSize">
-          <option value="0">Big Company</option>
-          <option value="1">Enterprise-Level Company</option>
-          <option value="2">Fast Paced Agency</option>
-          <option value="3">startups and smaller companies</option>
-        </select>
-        <h3>On a scale of 1-5 , rate how much you think you'd enjoy working with these languages</h4>
-        <h4>Ruby</h4>
-        <select class="form-control" id="rubyPref">
-          <option>5</option>
-          <option>4</option>
-          <option>3</option>
-          <option>2</option>
-          <option>1</option>
-        </select>
-        <h4>Java</h4>
-        <select class="form-control" id="javaPref">
-          <option>5</option>
-          <option>4</option>
-          <option>3</option>
-          <option>2</option>
-          <option>1</option>
-        </select>
-        <h4>PHP</h4>
-        <select class="form-control" id="phpPref">
-          <option>5</option>
-          <option>4</option>
-          <option>3</option>
-          <option>2</option>
-          <option>1</option>
-        </select>
-        <h4>C#</h4>
-        <select class="form-control" id="cSharpPref">
-          <option>5</option>
-          <option>4</option>
-          <option>3</option>
-          <option>2</option>
-          <option>1</option>
-        </select>
-        <button type="submit" class="btn">Submit!</button>
       </form>
       <div class="tracks">
         <div class="track" id="ruby">
+          <img src="img/ruby.jpg" alt="ruby logo">
           <h2>You Got The Ruby/Rails Track!</h2>
         </div>
         <div class="track" id="java">
+          <img src="img/java.jpg" alt="java logo">
           <h2>You Got The Java/Android Track!</h2>
         </div>
         <div class="track" id="php">
+          <img src="img/php.png" alt="php logo">
           <h2>You Got The PHP/Drupal Track!</h2>
         </div>
         <div class="track" id="cSharp">
+          <img src="img/cSharp.webp" alt="C# logo"> <p><a href="img/cSharp.webp"></a></p>
           <h2>You Got The C#/.NET Track!</h2>
         </div>
       </div>
