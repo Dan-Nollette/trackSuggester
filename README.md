@@ -30,7 +30,7 @@ _If you have problems, contact the author at Nollette.dan@gmail.com_
 
 ## Technologies Used
 
-_Uses HTML, CSS, and Javascript. In particular this project relies on use of bootstrap styling and Javascript._
+_This project uses HTML, CSS, and Javascript. In particular this project relies on use of bootstrap styling and Javascript._
 
 ### License
 
